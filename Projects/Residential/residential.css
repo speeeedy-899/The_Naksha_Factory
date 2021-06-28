@@ -1,0 +1,62 @@
+html, body{
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+hr{
+  border: 1px;
+  display:block;
+  opacity: 1;
+  width: 12%;
+  color: black;
+  background-color:#000;
+  height: 1px;
+}
+.resi-heading{
+  padding-top: 3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.resi-heading h1{
+letter-spacing: 5px;
+margin-bottom: 0;
+}
+.residential{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1%;
+}
+.project{
+
+  height: 70vh;
+  width: 60%;
+  text-align: left;
+  margin: 3% 0 3% 0;
+}
+.pro-img{
+  width: 100%;
+}
+.image-div{
+  position: relative;
+  /* padding-bottom: 3%; */
+}
+.image-div p{
+  position: absolute;
+  bottom: 0;
+  left: 2%;
+  color: white;
+}
+.hide {
+display: none;
+}
+.project:hover{
+  /* filter: blur(5px); */
+  cursor: pointer;
+}
+.project:hover + .hide {
+  visibility: visible;
+}
