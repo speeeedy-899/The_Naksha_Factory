@@ -1,0 +1,101 @@
+body, html{
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+h1{
+  margin: 0.4% 0 0.4% 0;
+  text-align: center;
+  letter-spacing: 5px;
+}
+hr{
+  border: 1px;
+  display:block;
+  opacity: 1;
+  width: 8%;
+  color: black;
+  background-color:#000;
+  height: 1px;
+  text-align: center;
+  margin: 0 auto 0 auto;
+}
+.top-hr{
+  margin-top: 2%;
+}
+p{
+  font-size: 150%;
+  padding-left: 4%;
+  padding-top: 2%;
+  color: #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+a{
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+}
+.project-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4%;
+  width: 100%;
+}
+.project-column{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.project-outer{
+  /* margin: 10%; */
+}
+.project-item{
+  width: 100%;
+  height: 60%;
+  position: relative;
+  opacity: 1;
+  background-color: gray;
+}
+.overlay{
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: #eeeeee;
+  overflow: hidden;
+  width: 100%;
+  height:0;
+  transition: .5s ease;
+}
+.project-item:hover .overlay {
+  bottom: 0;
+  height: 100%;
+  opacity: 0.7;
+}
+.image {
+  display: block;
+  width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}
+
+.arrow{
+  display: inline;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 7%;
+}
+.arrow img{
+  position: absolute;
+  right: 0;
+  width: 100%;
+  opacity: 0.6;
+  margin-left: auto;
+  transform: rotate(45deg);
+}

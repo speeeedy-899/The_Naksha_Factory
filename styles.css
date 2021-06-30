@@ -1,177 +1,174 @@
-html, body{
+html, body {
   margin: 0;
   padding: 0;
 }
 
-body{
+body {
   overflow-x: hidden;
-  /* background-image: url("https://images.alphacoders.com/435/435117.jpg"); */
-  background-color: gray;
+  background-color: #fff;
 }
 
-/*-------------------------------------------------------------------------------------------------------------------------
-----------------------------------------------Complete Menu Related Stuff--------------------------------------------------
- --------------------------------------------------------------------------------------------------------------------------*/
-
-
-
-.menu-container{
+.page-content{
   position: relative;
-  z-index: 1;
-  box-sizing: border-box;
-}
-.menu {
-  position: absolute;
-  right: 0;
-  text-align: right;
-  cursor: pointer;
-  display: inline;
-}
-.menu-links{
-  margin-bottom: 0;
-  background-color: #000;
-  opacity: 0.85;
-  display: flex;
-  list-style: none;
   width: 100%;
   height: 100vh;
-  justify-content: space-around;
-  align-items: center;
-
-  clip-path: circle(100px at 110% -20%);
-  -webkit-clip-path: circle(100px at 110% -20%);
-  transition: all 0.75s ease-in-out;
-  pointer-events: none;
+  padding: 0;
+  margin: 0;
 }
-.list-column{
+
+/* Menu Section */
+.close-icon{
+  z-index: 1;
+  width: 2%;
+  font-size: 250%;
+  position: absolute;
+  right: 3rem;
+  top: 3rem;
+  cursor: pointer;
+}
+.open-icon{
+  z-index: 1;
+  width: 2%;
+  font-size: 250%;
+  position: absolute;
+  right: 3rem;
+  top: 3rem;
+  cursor: pointer;
+}
+nav{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: #000;
+  opacity: 0.85;
+  z-index: 1;
+  top: -100vh;
+  left: 0;
+  text-align: center;
   display: flex;
-  justify-content: space-around;
-  flex-direction: column;
-  height: 60%;
   align-items: center;
+  justify-content: center;
+  transition: 0.6s ease;
 }
-
-/* Menu Open Animation */
-.menu-active{
-  clip-path: circle(2500px at 110% -20%);
-  -webkit-clip-path: circle(2500px at 110% -20%);
-  pointer-events: all;
+nav ul li{
+  list-style: none;
+  margin: 60% 0;
 }
-.menu-links li a{
-  font-family: 'Montserrat', sans-serif;
-  color: #fff;
+nav ul li a{
   text-decoration: none;
-  font-size: 50px;
-}
-.menu-links li{
-  opacity: 0;
-}
-.menu-links li:nth-child(1){
-  transition: all 0.5s ease 0.3s;
-}
-.menu-links li:nth-child(2){
-transition: all 0.5s ease 0.6s;
-}
-.menu-links li:nth-child(3){
-transition: all 0.5s ease 0.9s;
-}
-li.fade{
-  opacity: 1 !important;
-}
-
-
-/* Menu link underline animation */
-.underline{
+  color: #fff;
+  font-size: 200%;
   position: relative;
 }
-.underline::before{
-  content: '';
+nav ul li a:hover{
+  color: #fff;
+}
+nav ul li a::after{
+  content: "";
+  height: 3px;
+  width: 0;
+  background: #fff;
   position: absolute;
   bottom: 0;
-  right: 0;
-  width: 0;
-  height:3px;
-  border-radius: 20px;
-  background-color: #fff;
-  transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  left: 0;
+  transition: width 0.5s;
 }
-@media (hover: hover) and (pointer: fine) {
-  .underline:hover::before{
-    left: 0;
-    right: auto;
-    width: 100%;
-  }
+nav ul li a:hover::after{
+  width: 100%;
 }
 
-/* Menu Icon Animation Start */
-svg {
-  transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+/* Transparent Scrollbar */
+::-webkit-scrollbar
+{
+	width: 0;
 }
-.active svg {
-  transform: rotate(90deg);
+::-webkit-scrollbar-thumb
+{
+  background: transparent;
 }
-path {
-  transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1),
-    stroke-dasharray 500ms cubic-bezier(0.4, 0, 0.2, 1),
-    stroke-dashoffset 500ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-path:nth-child(1) {
-  transform-origin: 36% 40%;
-}
-path:nth-child(2) {
-  stroke-dasharray: 29 299;
-}
-path:nth-child(3) {
-  transform-origin: 35% 63%;
-}
-path:nth-child(4) {
-  stroke-dasharray: 29 299;
-}
-path:nth-child(5) {
-  transform-origin: 61% 52%;
-}
-path:nth-child(6) {
-  transform-origin: 62% 52%;
-}
-.active path:nth-child(1) {
-  transform: translateX(9px) translateY(1px) rotate(45deg);
-}
-.active path:nth-child(2) {
-  stroke-dasharray: 225 299;
-  stroke-dashoffset: -72px;
-}
-.active path:nth-child(3) {
-  transform: translateX(9px) translateY(1px) rotate(-45deg);
-}
-.active path:nth-child(4) {
-  stroke-dasharray: 225 299;
-  stroke-dashoffset: -72px;
-}
-.active path:nth-child(5) {
-  transform: translateX(9px) translateY(1px) rotate(-45deg);
-}
-.active path:nth-child(6) {
-  transform: translateX(9px) translateY(1px) rotate(45deg);
-}
-/* Menu Icon Animation End */
 
-
-/* RSA Architects Heading */
-.showcase{
-  /* height: 100vh; */
+/* Socials */
+.socials{
   position: absolute;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  top: 20px;
-  width: 30%;
+  flex-direction: column;
+  right: 0.8rem;
+  top: 50%;
+  transform: translateY(-50%);
+  padding-right: 1.5%;
 }
-.heading{
+.social-icons{
+  padding: 10% 0 10% 0;
+}
+.fab{
+  font-size: 220%;
+  margin: 1%;
+}
+.fa-twitter,.fa-google-plus-g,.fa-facebook,.fa-linkedin-in{
+  transition: 0.4s;
+  color: #000;
+}
+.fa-twitter:hover{
+  color: #1DA1F3;
+}
+.fa-google-plus-g:hover{
+  color: #E5393F;
+}
+.fa-facebook:hover{
+  color: #3B5998;
+}
+.fa-linkedin-in:hover{
+  color: #0077B5;
+}
+
+/* Tag line section */
+.tag-line{
+  /* z-index: 0; */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 5%;
+}
+
+/* Firm logo section */
+.logo{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 25%;
+}
+.logo-inner{
+  position: relative;
+}
+/* Page division with vertical line */
+.vertical-line{
+  z-index: -1;
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translateY(-50%);
+  border-left: 2000px solid gray;
+  height: 100vh;
+}
+
+/* Firm Details Section */
+.firm-details{
+  position: absolute;
+  right: 20%;
+  top: 50%;
+  transform: translateY(-50%);
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  top: 0;
-  padding-left: 2%;
-  /* width: 30%; */
-  align-items: center;
+}
+.detail-item{
+  margin: 2%;
+  text-align: center;
+}
+/* Footer */
+.footer{
+  height: 30%;
+  background: #444444;
   font-family: 'Montserrat', sans-serif;
+  color: #EDEDED;
 }
