@@ -1,10 +1,4 @@
-html, body {
-  margin: 0;
-  padding: 0;
-}
-
 body {
-  overflow-x: hidden;
   background-color: #fff;
 }
 
@@ -16,7 +10,7 @@ body {
   margin: 0;
 }
 
-/* Menu Section */
+/* Menu section */
 .close-icon{
   z-index: 1;
   width: 2%;
@@ -31,60 +25,20 @@ body {
   width: 2%;
   font-size: 250%;
   position: absolute;
-  right: 3rem;
   top: 3rem;
+  right: 3rem;
   cursor: pointer;
+  animation-name: menu-slide;
+  animation-duration: 2.25s;
+  animation-fill-mode: forwards;
+  animation-delay: -0.2s;
 }
-nav{
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-  background: #000;
-  opacity: 0.85;
-  z-index: 1;
-  top: -100vh;
-  left: 0;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: 0.6s ease;
+@keyframes menu-slide {
+0%   {right:-40%;}
+100% {right:3rem;}
 }
-nav ul li{
-  list-style: none;
-  margin: 60% 0;
-}
-nav ul li a{
-  text-decoration: none;
-  color: #fff;
-  font-size: 200%;
-  position: relative;
-}
-nav ul li a:hover{
-  color: #fff;
-}
-nav ul li a::after{
-  content: "";
-  height: 3px;
-  width: 0;
-  background: #fff;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  transition: width 0.5s;
-}
-nav ul li a:hover::after{
-  width: 100%;
-}
-
-/* Transparent Scrollbar */
-::-webkit-scrollbar
-{
-	width: 0;
-}
-::-webkit-scrollbar-thumb
-{
-  background: transparent;
+.open-active{
+  animation-name: menu-no-slide;
 }
 
 /* Socials */
@@ -92,26 +46,98 @@ nav ul li a:hover::after{
   position: absolute;
   display: flex;
   flex-direction: column;
-  right: 0.8rem;
+  height: 50%;
   top: 50%;
   transform: translateY(-50%);
   padding-right: 1.5%;
+  right:0.8rem;
+}
+.social-outer{
+  position: relative;
+  height: 90%;
+}
+.social-mid{
+  position: absolute;
+}
+.social-a{
+  top: 25%;
+}
+.social-b{
+  top: 50%;
+}
+.social-c{
+  top: 75%;
+}
+.social-d{
+  top: 100%;
 }
 .social-icons{
-  padding: 10% 0 10% 0;
+  position: relative;
+  padding: 70% 0 70% 0;
 }
 .fab{
   font-size: 220%;
   margin: 1%;
 }
-.fa-twitter,.fa-google-plus-g,.fa-facebook,.fa-linkedin-in{
+.fa-twitter{
+  right:-40rem;
+  position: absolute;
+  animation-name: social-a;
+  animation-duration: 2.25s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.4s;
+}
+.fa-google-plus{
+  right:-40rem;
+  top: 50%;
+  position: absolute;
+  animation-name: social-b;
+  animation-duration: 2.25s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.8s;
+}
+.fa-facebook{
+  right:-40rem;
+  top: 75%;
+  position: absolute;
+  animation-name: social-c;
+  animation-duration: 2.25s;
+  animation-fill-mode: forwards;
+  animation-delay: 1.2s;
+}
+.fa-linkedin-in{
+  right:-40rem;
+  top: 100%;
+  position: absolute;
+  animation-name: social-d;
+  animation-duration: 2.25s;
+  animation-fill-mode: forwards;
+  animation-delay: 1.6s;
+}
+@keyframes social-a{
+0%   {right:-40rem;}
+100% {right:0.8rem;}
+}
+@keyframes social-b{
+0%   {right:-40rem;}
+100% {right:0.8rem;}
+}
+@keyframes social-c{
+0%   {right:-40rem;}
+100% {right:0.8rem;}
+}
+@keyframes social-d{
+0%   {right:-40rem;}
+100% {right:0.8rem;}
+}
+.fa-twitter,.fa-google-plus,.fa-facebook,.fa-linkedin-in{
   transition: 0.4s;
   color: #000;
 }
 .fa-twitter:hover{
   color: #1DA1F3;
 }
-.fa-google-plus-g:hover{
+.fa-google-plus:hover{
   color: #E5393F;
 }
 .fa-facebook:hover{
@@ -123,52 +149,133 @@ nav ul li a:hover::after{
 
 /* Tag line section */
 .tag-line{
-  /* z-index: 0; */
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(50%);
   top: 5%;
+  color: #000;
+  animation-name: tag-slide;
+  animation-duration: 2.25s;
+  animation-fill-mode: forwards;
+}
+@keyframes tag-slide {
+0%   {right:-140%;}
+100% {right: 50%;}
+}
+.tag-line h1{
+  text-align: center;
+  margin: 0;
+}
+.tag-line hr{
+  width: 60%;
+  margin: 1% auto 1% auto;
+  opacity: 0.9;
+}
+.tag-line p{
+  text-align: center;
+  font-size: 0.9rem;
+  padding-top: 1%;
 }
 
+/* Cover image section */
+.cover-image{
+  position: absolute;
+  left: 1%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.cover img{
+  position: relative;
+  width: 60%;
+  opacity: 0.8;
+  box-shadow:0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  animation-name: cover-slide;
+  animation-duration: 2.25s;
+  animation-fill-mode: forwards;
+  -webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+@keyframes cover-slide {
+  0%   {left:-100%;}
+  100% {left:1%;}
+}
+.cover img:hover{
+  -webkit-transform: scale(1.02);
+	transform: scale(1.02);
+}
 /* Firm logo section */
 .logo{
   position: absolute;
+
   top: 50%;
   transform: translateY(-50%);
-  left: 25%;
+  left: 29%;
 }
 .logo-inner{
   position: relative;
+  width: 20%;
+}
+.logo-inner img{
+  width: 150%;
 }
 /* Page division with vertical line */
 .vertical-line{
   z-index: -1;
   position: absolute;
+  right: -200%;
   top: 50%;
-  left: 30%;
   transform: translateY(-50%);
-  border-left: 2000px solid gray;
+  border-right: 2000px solid #b1b4ae;
   height: 100vh;
+  animation-name: line-slide;
+  animation-duration: 2.25s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes line-slide {
+0%   {right:-140%;}
+100% {right:20%;}
+}
+.vertical-line-2{
+  z-index: -1;
+  position: absolute;
+  right: -200%;
+  top: 50%;
+  transform: translateY(-50%);
+  border-left: 9rem solid #b1b4ae;
+  height: 100vh;
+  animation-name: line-slide-2;
+  animation-duration: 2.25s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes line-slide-2 {
+0%   {right:-140%;}
+100% {right:0;}
 }
 
 /* Firm Details Section */
 .firm-details{
   position: absolute;
-  right: 20%;
+  right: 25%;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-35%);
+  width: 35%;
+  height: 50%;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
+}
+.details-column{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 .detail-item{
-  margin: 2%;
+  height: 100%;
+  /* padding: 5% 0; */
   text-align: center;
-}
-/* Footer */
-.footer{
-  height: 30%;
-  background: #444444;
-  font-family: 'Montserrat', sans-serif;
-  color: #EDEDED;
+  color: #000;
 }

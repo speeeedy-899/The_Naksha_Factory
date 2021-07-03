@@ -1,7 +1,5 @@
-body, html{
-  padding: 0;
-  margin: 0;
-  font-family: 'Montserrat', sans-serif;
+.content{
+  position: relative;
 }
 h1{
   margin: 0.4% 0 0.4% 0;
@@ -9,20 +7,19 @@ h1{
   letter-spacing: 5px;
 }
 hr{
-  border: 1px;
   display:block;
-  opacity: 1;
-  width: 8%;
-  color: black;
-  background-color:#000;
-  height: 1px;
-  text-align: center;
+  width: 40%;
   margin: 0 auto 0 auto;
 }
-.top-hr{
-  margin-top: 2%;
+.projects-heading{
+  position: relative;
+  padding-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-p{
+.overlay p{
   font-size: 150%;
   padding-left: 4%;
   padding-top: 2%;
@@ -39,24 +36,53 @@ a{
   width: 100%;
   text-decoration: none;
 }
+
+/* Menu section */
+.menu{
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.close-icon{
+  z-index: 1;
+  width: 2%;
+  font-size: 250%;
+  position: absolute;
+  right: 3rem;
+  top: 3rem;
+  cursor: pointer;
+}
+.open-icon{
+  z-index: 1;
+  width: 2%;
+  font-size: 250%;
+  position: absolute;
+  right: 3rem;
+  top: 3rem;
+  cursor: pointer;
+}
+
 .project-container{
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 4%;
+  flex-direction: row;
+  /* padding: 4%; */
   width: 100%;
+  height: 50rem;
 }
 .project-column{
-  display: flex;
-  flex-direction: column;
-  width: 50%;
+  width: 30%;
+  height: 50%;
 }
 .project-outer{
   /* margin: 10%; */
 }
 .project-item{
   width: 100%;
-  height: 60%;
+  height: 50%;
   position: relative;
   opacity: 1;
   background-color: gray;
@@ -80,7 +106,7 @@ a{
 .image {
   display: block;
   width: 100%;
-  min-height: 100%;
+  height: 100%;
   object-fit: cover;
 }
 

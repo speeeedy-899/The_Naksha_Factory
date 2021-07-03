@@ -1,11 +1,25 @@
-
-const navLinks = document.querySelector(".menu-links");
-const links = document.querySelectorAll(".menu-links li");
 const body = document.querySelector("body");
 const html = document.querySelector("html");
 const menuNav = document.querySelector("#menu");
 const openIcon = document.querySelector(".open-icon");
-const closeIcon = document.querySelector(".close-icon");
+
+var style1 = {
+  useEasing: true,
+  useGrouping: true,
+  suffix: "+"
+}
+var style2 = {
+  useEasing: true,
+  useGrouping: true
+}
+var year = new CountUp ("years", 0, 20, 0, 5, style1);
+year.start();
+var client = new CountUp ("clients", 0, 500, 0, 3, style1);
+client.start();
+var project = new CountUp ("projects", 0, 800, 0, 3, style1);
+project.start();
+var day = new CountUp ("days", 0, 300, 0, 3, style2);
+day.start();
 
 function closeMenu(){
   menuNav.style.top = "-100vh";
@@ -16,12 +30,9 @@ function openMenu(){
   menuNav.style.top = "0";
   openIcon.style.display = "none";
   body.style.overflow = "hidden";
+  openIcon.classList.add("open-active");
 }
-menu.addEventListener("click", function() {
-  navLinks.classList.toggle("menu-active");
-  body.classList.toggle(".menu-open");
-  html.classList.toggle(".menu-open");
-  links.forEach(link=>{
-    link.classList.toggle("fade");
-  });
-});
+
+let date = new Date();
+let copyrightYear = date.getFullYear();
+document.getElementById("cpr-year").innerHTML = copyrightYear;
