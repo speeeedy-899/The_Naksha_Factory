@@ -9,7 +9,6 @@ body {
 }
 
 /* Menu Section */
-
 nav{
   position: fixed;
   width: 100%;
@@ -27,7 +26,7 @@ nav{
 }
 nav ul li{
   list-style: none;
-  margin: 60% 0;
+  margin: 50% 0;
 }
 nav ul li a{
   text-decoration: none;
@@ -66,8 +65,9 @@ nav ul li a:hover::after{
 
 /* Footer */
 .footer{
+  z-index: 5;
   height: 4rem;
-  background: #444444;
+  background: #000;
   font-family: 'Montserrat', sans-serif;
   color: #EDEDED;
 }

@@ -1,67 +1,100 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html> -->
 <html lang="en" dir="ltr">
 
 <head>
   <meta charset="utf-8">
-  <title>The Naksha Factory || Residential Projects</title>
+  <title>The Naksha Factory || Industrial Projects</title>
 
-  <link rel="icon" href="https://image.flaticon.com/icons/png/512/1001/1001271.png">
+  <!-- <link rel="icon" href="https://image.flaticon.com/icons/png/512/1001/1001271.png"> -->
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
 
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+  <!-- Slick CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
 
   <!-- Custom stylesheet -->
-  <link rel="stylesheet" href="industrial.css">
+  <link rel="stylesheet" href="../../master.css">
+  <link rel="stylesheet" href="../common.css">
+  <link rel="stylesheet" href="hospiality.css">
 
 </head>
 
 <body>
-  <div class="resi-heading">
-    <hr>
-    <h1>INDUSTRIAL</h1>
-    <hr>
-  </div>
-  <div class="residential">
-    <div class="project pro-1">
-      <div class="">
-        <h2>Residence for</h2>
-        <h4>Mr. Dinesh Jain</h4>
-      </div>
-      <div class="image-div">
-        <img class="pro-1-img pro-img" src="https://static.dezeen.com/uploads/2021/06/artis-naples-baker-museum-florida-weiss-manfredi-renovation-usa-_dezeen_2364_hero-a-2048x1152.jpg" alt="">
-        <p>Sample image</p>
-      </div>
-
-
+  <div class="content">
+    <div class="resi-heading">
+      <hr>
+      <h1>INDUSTRIAL PROJECTS</h1>
+      <hr>
     </div>
-
-    <div class="project pro-1">
-      <div class="">
-        <h2>Residence for</h2>
-        <h4>Mr Mani Ji</h4>
-      </div>
-      <div class="image-div">
-        <img class="pro-1-img pro-img" src="https://images.adsttc.com/media/images/5f90/fb38/63c0/1756/a700/01b8/slideshow/Islesboro3.jpg?1603336999" alt="">
-        <p>Sample image</p>
-      </div>
-
-
+    <div class="vertical-line"></div>
+    <div class="vertical-line2"></div>
+    <div class="menu">
+      <nav id="menu">
+        <ul>
+          <li><a href="../projects.html">Projects</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Media & Awards</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+        <i class="fal fa-times close-icon" style="color: #fff" onclick="closeMenu()"></i>
+      </nav>
+      <i class="far fa-bars open-icon" style="color: #fff" onclick="openMenu()"></i>
     </div>
-    <!-- <div class="project pro-2">
-
-    </div> -->
+    <div class="carousel-content">
+      <div class="carousel-inner">
+        <div class="carousel-text">
+          <h2 style="margin-top: 8%;">Project name:</h2>
+          <h5><i class="fas fa-map-marker-alt"></i> Location</h5>
+        </div>
+        <div class="carousel2 carousel">
+          <div class="slide">
+            <div class="image">
+              <div class="image-text">
+                <p>Lorem Ipsum</p>
+              </div>
+              <img src="../../Images/INDUSTRIAL/1.jpg" alt="">
+            </div>
+          </div>
+          <div class="slide">
+            <div class="image">
+              <img src="../../Images/INDUSTRIAL/2.jpg" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+
+
+  <footer class="footer mt-auto py-3">
+    <div class="copyright container">
+      <p>&#169; 2021 The Naksha Factory</p>
+    </div>
+  </footer>
+
+  <!-- jQuery CDN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-  <!-- JavScript file -->
-  <script src="app.js" charset="utf-8"></script>
+  <!-- Slick JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  </script>
+
+  <!-- Local JavScript file -->
+  <script src="../slick.js" charset="utf-8"></script>
+  <script src="../../app.js" charset="utf-8"></script>
 </body>
 
 </html>
