@@ -56,18 +56,34 @@ a{
 
 /* Menu section */
 .close-icon{
-  font-size: 250%;
+  font-size: 180%;
   position: absolute;
   right: 3rem;
   top: 3rem;
   cursor: pointer;
+  -webkit-transform: rotate(0);
+  transform: rotate(0);
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+.close-icon:hover{
+  -webkit-transform: rotate(90deg);
+	transform: rotate(90deg);
 }
 .open-icon{
-  font-size: 250%;
+  font-size: 180%;
   position: absolute;
   right: 3rem;
   top: 3rem;
   cursor: pointer;
+  -webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .2s ease-in-out;
+	transition: .2s ease-in-out;
+}
+.open-icon:hover{
+  -webkit-transform: scale(1.2);
+	transform: scale(1.2);
 }
 
 /* Projects Section */

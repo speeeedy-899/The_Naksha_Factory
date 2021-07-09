@@ -26,16 +26,24 @@ body {
 .close-icon{
   z-index: 1;
   width: 2%;
-  font-size: 250%;
+  font-size: 200%;
   position: absolute;
   right: 3rem;
   top: 3rem;
   cursor: pointer;
+  -webkit-transform: rotate(0);
+  transform: rotate(0);
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+.close-icon:hover{
+  -webkit-transform: rotate(90deg);
+	transform: rotate(90deg);
 }
 .open-icon{
   z-index: 1;
   width: 2%;
-  font-size: 250%;
+  font-size: 200%;
   position: absolute;
   top: 3rem;
   right: 3rem;
@@ -44,7 +52,15 @@ body {
   animation-duration: 2.25s;
   animation-fill-mode: forwards;
   animation-delay: -0.2s;
-}
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+  }
+  .open-icon:hover{
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  }
 @keyframes menu-slide {
 0%   {right:-40%;}
 100% {right:3rem;}
