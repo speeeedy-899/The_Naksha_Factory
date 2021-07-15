@@ -23,8 +23,8 @@ day.start();
 
 function closeMenu(){
   menuNav.style.top = "-100vh";
-  openIcon.style.display = "inline-block";
   body.style.overflowY = "scroll";
+  setTimeout(function() {openIcon.style.display = "inline-block";}, 500);
 }
 function openMenu(){
   menuNav.style.top = "0";

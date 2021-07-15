@@ -21,7 +21,8 @@ nav{
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: 0.6s ease;
+  transition: 0.6s;
+  transition-timing-function: cubic-bezier(.57,0,.19,1);
 }
 nav ul li{
   list-style: none;
@@ -64,7 +65,7 @@ nav ul li a:hover::after{
 
 /* Footer */
 .footer{
-  z-index: 5;
+  /* z-index: 5; */
   height: 4rem;
   background: #000;
   font-family: 'Montserrat', sans-serif;
