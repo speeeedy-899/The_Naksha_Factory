@@ -604,12 +604,12 @@ body {
   /* Menu Icon Section */
   .open-icon{
     animation-name: menu-slide-mobile;
-    font-size: 180%;
+    font-size: 150%;
     right: 2rem;
     top: 3rem;
   }
   .close-icon{
-    font-size: 180%;
+    font-size: 150%;
     right: 2rem;
     top: 3rem;
   }
