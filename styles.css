@@ -633,7 +633,7 @@ body {
   .firm-details{
     width: 100%;
     bottom: 15%;
-    right: 50
+    right: 50%;
     transform: translateX(50%);
   }
   .details-column{
@@ -646,8 +646,11 @@ body {
     text-align: center;
     color: #fff;
   }
+  .detail-item h1{
+    font-size: 1.5rem;
+  }
   .detail-item h5{
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
   .socials{
     display: none;

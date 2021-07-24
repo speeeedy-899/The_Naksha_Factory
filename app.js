@@ -172,7 +172,7 @@ else if (deviceWidth <= 768) {
   {
     "particles": {
       "number": {
-        "value": 80,
+        "value": 60,
         "density": {
           "enable": true,
           "value_area": 800
