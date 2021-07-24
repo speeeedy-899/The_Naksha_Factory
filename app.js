@@ -23,13 +23,13 @@ day.start();
 
 function closeMenu(){
   menuNav.style.top = "-100vh";
-  body.style.overflowY = "scroll";
+  html.style.overflowY = "scroll";
   setTimeout(function() {openIcon.style.display = "inline-block";}, 500);
 }
 function openMenu(){
   menuNav.style.top = "0";
   openIcon.style.display = "none";
-  body.style.overflow = "hidden";
+  html.style.overflow = "hidden";
   openIcon.classList.add("open-active");
 }
 

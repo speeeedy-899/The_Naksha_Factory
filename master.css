@@ -1,9 +1,9 @@
 html, body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 body {
-  overflow-x: hidden;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -24,14 +24,16 @@ nav{
   transition: 0.6s;
   transition-timing-function: cubic-bezier(.57,0,.19,1);
 }
+nav ul{
+  padding: 0;
+}
 nav ul li{
   list-style: none;
-  margin: 50% 0;
+  margin: 40% 0;
 }
 nav ul li a{
   text-decoration: none;
   color: #fff;
-  font-size: 200%;
   position: relative;
   letter-spacing: 2px;
 }
@@ -65,9 +67,45 @@ nav ul li a:hover::after{
 
 /* Footer */
 .footer{
-  /* z-index: 5; */
-  height: 4rem;
+  position: relative;
   background: #000;
   font-family: 'Montserrat', sans-serif;
   color: #EDEDED;
+}
+.footer-outer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+footer ul{
+  padding: 0;
+}
+footer ul li{
+  list-style: none;
+}
+
+/* Responsive Section */
+@media screen and (min-width: 1200px){
+  /* Menu List Section */
+  nav ul li a{
+    font-size: 200%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1200px){
+  /* Menu List Section */
+  nav ul li a{
+    font-size: 200%;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 768px){
+  /* Menu List Section */
+  nav ul li a{
+    font-size: 150%;
+  }
+}
+@media screen and (max-width: 500px){
+  /* Menu List Section */
+  nav ul li a{
+    font-size: 140%;
+  }
 }

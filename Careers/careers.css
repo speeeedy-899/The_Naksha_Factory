@@ -114,7 +114,7 @@ hr{
 }
 .contact{
   opacity: 0.9;
-  padding: 5%;
+  padding: 2%;
   width: 50%;
   margin: 0 auto;
 }
@@ -143,4 +143,7 @@ hr{
   -moz-transform: scale(1.2);
   -webkit-transform: scale(1.2);
 	transform: scale(1.2);
+}
+.google-map{
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
