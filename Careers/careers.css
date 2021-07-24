@@ -6,24 +6,34 @@ body{
 }
 
 /* Heading section */
-h1{
-  margin: 0.4% 0 0.4% 0;
-  text-align: center;
-  letter-spacing: 5px;
-}
-hr{
-  opacity: 1;
-  display:block;
-  width: 8%;
-  margin: 0 auto 0 auto;
-}
 .career-heading{
   position: relative;
-  padding-top: 3rem;
+  padding-top: 2.3rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.career-heading h1{
+  position: relative;
+  margin: 0;
+  padding: 3px 0;
+  text-align: center;
+  letter-spacing: 5px;
+}
+.career-heading h1::after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    width: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.career-heading h1::after{
+  bottom: 0;
 }
 .hiring-heading span{
   color: #849bc7;
@@ -31,20 +41,17 @@ hr{
 
 /* Menu section */
 .close-icon{
-  font-size: 180%;
   position: absolute;
-  right: 3rem;
-  top: 3rem;
   cursor: pointer;
   -ms-transform: rotate(0);
   -o-transform: rotate(0);
   -moz-transform: rotate(0);
   -webkit-transform: rotate(0);
   transform: rotate(0);
-  -o-transition: .2s ease-in-out;
-  -moz-transition: .2s ease-in-out;
-  -webkit-transition: .2s ease-in-out;
-  transition: .2s ease-in-out;
+  -o-transition: .4s cubic-bezier(.75,-0.5,.25,1.5);
+  -moz-transition: .4s cubic-bezier(.75,-0.5,.25,1.5);
+  -webkit-transition: .4s cubic-bezier(.75,-0.5,.25,1.5);
+  transition: .4s cubic-bezier(.75,-0.5,.25,1.5);
 }
 .close-icon:hover{
   -ms-transform: rotate(90deg);
@@ -54,10 +61,7 @@ hr{
 	transform: rotate(90deg);
 }
 .open-icon{
-  font-size: 180%;
   position: absolute;
-  right: 3rem;
-  top: 3rem;
   cursor: pointer;
   -ms-transform: scale(1);
   -o-transform: scale(1);
@@ -78,51 +82,26 @@ hr{
 }
 
 /* Job description section */
-
 .career-inner{
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  margin: 3% 0;
 }
-.job-desc{
-  width: 35%;
+.career-image img{
+  width: 100%;
 }
-.outer-job{
-  margin: 6% 0;
-}
-.duration-location{
-  margin-bottom: -1%;
-  display: flex;
-  flex-direction: row;
-}
-.duration{
-  width: 40%;
-}
-.location{
-  width: 60%;
-}
-.title-desc{
-  width: 60%;
-}
+
 
 /* Contact hiring section */
 .contact-hiring{
   text-align: center;
-  /* height: 40%; */
   background-color: #cad4e7;
 }
 .contact{
   opacity: 0.9;
   padding: 2%;
-  width: 50%;
   margin: 0 auto;
 }
 .contact span{
   font-style: italic;
-}
-.contact-section{
-  margin: 8% 0;
 }
 .fas{
   color: #000;
@@ -145,5 +124,236 @@ hr{
 	transform: scale(1.2);
 }
 .google-map{
+  height: 450px;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+/* Responsive Section */
+@media screen and (min-width: 1200px){
+  /* Menu Icon Section */
+  .open-icon{
+    font-size: 180%;
+    right: 3rem;
+    top: 3rem;
+  }
+  .close-icon{
+    font-size: 180%;
+    right: 3rem;
+    top: 3rem;
+  }
+
+  /* Job Description Section */
+  .career-inner{
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 3% 0;
+  }
+  .career-image{
+    width: 60%;
+  }
+  .job-desc{
+    width: 35%;
+  }
+  .outer-job{
+    margin: 6% 0;
+  }
+  .duration-location{
+    margin-bottom: -1%;
+    display: flex;
+    flex-direction: row;
+  }
+  .duration{
+    width: 40%;
+  }
+  .location{
+    width: 60%;
+  }
+  .title-desc{
+    width: 60%;
+  }
+
+  /* Contact Section */
+  .contact{
+    width: 50%;
+  }
+  .contact-section{
+    margin: 8% 0;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1200px){
+  /* Menu Icon Section */
+  .open-icon{
+    font-size: 160%;
+    right: 3rem;
+    top: 3rem;
+  }
+  .close-icon{
+    font-size: 160%;
+    right: 3rem;
+    top: 3rem;
+  }
+
+  /* Job Description Section */
+  .career-inner{
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 5% 0;
+  }
+  .career-image{
+    width: 70%;
+    margin: 3% 0;
+  }
+  .job-desc{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    margin: 3% 0;;
+  }
+  .outer-job{
+    margin: 2% 0;
+  }
+  .duration-location{
+    display: flex;
+    flex-direction: column;
+  }
+  .duration{
+    margin: 2% 0;
+  }
+  .location{
+    margin: 2% 0;
+  }
+  .title-desc{
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  /* Contact Section */
+  .contact{
+    width: 60%;
+  }
+  .contact-section{
+    margin: 10% 0;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 768px){
+  /* Menu Icon Section */
+  .open-icon{
+    font-size: 150%;
+    right: 2.5rem;
+    top: 3rem;
+  }
+  .close-icon{
+    font-size: 150%;
+    right: 2.5rem;
+    top: 3rem;
+  }
+
+  /* Job Description Section */
+  .career-inner{
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 5% 0;
+  }
+  .career-image{
+    width: 80%;
+    margin: 3% 0;
+  }
+  .job-desc{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 3% 0;;
+  }
+  .outer-job{
+    margin: 2% 0;
+  }
+  .duration-location{
+    display: flex;
+    flex-direction: column;
+  }
+  .duration{
+    margin: 2% 0;
+  }
+  .location{
+    margin: 2% 0;
+  }
+  .title-desc{
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  /* Contact Section */
+  .contact{
+    width: 70%;
+  }
+  .contact-section{
+    margin: 15% 0;
+  }
+}
+@media screen and (max-width: 500px){
+  /* Menu Icon Section */
+  .open-icon{
+    font-size: 140%;
+    right: 2rem;
+    top: 3rem;
+  }
+  .close-icon{
+    font-size: 140%;
+    right: 2rem;
+    top: 3rem;
+  }
+
+  /* Job Description Section */
+  .career-inner{
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 5% 0;
+  }
+  .career-image{
+    width: 90%;
+    margin: 3% 0;
+  }
+  .job-desc{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 3% 0;;
+  }
+  .outer-job{
+    margin: 2% 0;
+  }
+  .duration-location{
+    display: flex;
+    flex-direction: column;
+  }
+  .duration{
+    margin: 2% 0;
+  }
+  .location{
+    margin: 2% 0;
+  }
+  .title-desc{
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  /* Contact Section */
+  .contact{
+    width: 90%;
+  }
+  .contact-section{
+    margin: 20% 0;
+  }
 }
