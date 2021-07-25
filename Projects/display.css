@@ -1,0 +1,263 @@
+html, body{
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fff;
+}
+.content{
+  position: relative;
+}
+
+/* Heading Section */
+.heading{
+  padding-top: 0.5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.heading h1{
+  position: relative;
+  text-align: center;
+  padding: 5px;
+  letter-spacing: 5px;
+}
+.heading h1::after{
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+.heading h1::after{
+  width: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+}
+
+/* Menu section */
+.close-icon{
+  position: absolute;
+  cursor: pointer;
+  -ms-transform: rotate(0);
+  -o-transform: rotate(0);
+  -moz-transform: rotate(0);
+  -webkit-transform: rotate(0);
+  transform: rotate(0);
+  -o-transition: .4s cubic-bezier(.75,-0.5,.25,1.5);
+  -moz-transition: .4s cubic-bezier(.75,-0.5,.25,1.5);
+  -webkit-transition: .4s cubic-bezier(.75,-0.5,.25,1.5);
+  transition: .4s cubic-bezier(.75,-0.5,.25,1.5);
+}
+.close-icon:hover{
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+.open-icon{
+  position: absolute;
+  cursor: pointer;
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  -moz-transform: scale(1);
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -o-transition: .2s ease-in-out;
+  -moz-transition: .2s ease-in-out;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+.open-icon:hover{
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+	transform: scale(1.2);
+}
+
+/* Project Display Section */
+.project-display{
+  margin: 0 auto;
+}
+.project-text{
+  text-align: center;
+}
+.project-image img{
+  width: 100%;
+}
+
+.project-image img,.overlay {
+  transition: 0.3s all;
+}
+.overlay{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.image-inner {
+  position: relative;
+}
+.image-inner img {
+  width: 100%;
+  /* margin-bottom: -4px; */
+}
+.image-inner .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  opacity: 0;
+}
+.image-inner:hover .overlay {
+  opacity: 1;
+}
+.image-inner:hover img {
+  -webkit-filter: blur(4px);
+  filter: blur(4px);
+}
+p .fas{
+  color: white;
+}
+.fas{
+  color: black;
+}
+
+/* Responsive Section */
+@media screen and (min-width: 1200px){
+  /* Menu Icon Section */
+  .open-icon{
+    font-size: 180%;
+    right: 3rem;
+    top: 3rem;
+  }
+  .close-icon{
+    font-size: 180%;
+    right: 3rem;
+    top: 3rem;
+  }
+
+  /* Menu Icon Section */
+  .open-icon{
+    font-size: 180%;
+    right: 3rem;
+    top: 3rem;
+  }
+  .close-icon{
+    font-size: 180%;
+    right: 3rem;
+    top: 3rem;
+  }
+  /* Project Section */
+  .project-display{
+    width: 60%;
+  }
+  .project{
+    margin: 10% 0;
+  }
+  .project-text{
+    display: none;
+  }
+  .fas{
+    font-size: 120%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1200px){
+  /* Menu Icon Section */
+  .open-icon{
+    font-size: 180%;
+    right: 3rem;
+    top: 3rem;
+  }
+  .close-icon{
+    font-size: 180%;
+    right: 3rem;
+    top: 3rem;
+  }
+
+  /* Projects Section */
+  .project-display{
+    width: 70%;
+  }
+  .project{
+    margin: 10% 0;
+  }
+  .project-text{
+    display: block;
+  }
+  .fas{
+    font-size: 120%;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 768px){
+  /* Menu Icon Section */
+  .open-icon{
+    font-size: 180%;
+    right: 3rem;
+    top: 2.5rem;
+  }
+  .close-icon{
+    font-size: 180%;
+    right: 3rem;
+    top: 2.5rem;
+  }
+
+  /* Projects Section */
+  .project-display{
+    width: 90%;
+  }
+  .project{
+    margin: 10% 0;
+  }
+  .project-text{
+    display: block;
+  }
+  .fas{
+    font-size: 110%;
+  }
+}
+@media screen and (max-width: 500px){
+  /* Heading Section */
+  .heading h1{
+    font-size: 1.5rem;
+  }
+
+  /* Menu Icon Section */
+  .open-icon{
+    font-size: 160%;
+    right: 1.5rem;
+    top: 2.5rem;
+  }
+  .close-icon{
+    font-size: 160%;
+    right: 1.5rem;
+    top: 2.5rem;
+  }
+
+  /* Projects Section */
+  .project-display{
+    width: 90%;
+  }
+  .project{
+    margin: 10% 0;
+  }
+  .project-text{
+    display: block;
+  }
+  .project-text h2{
+    font-size: 1.3rem;
+  }
+  .project-text h5{
+    font-size: 1rem;
+  }
+  .fas{
+    font-size: 100%;
+  }
+}

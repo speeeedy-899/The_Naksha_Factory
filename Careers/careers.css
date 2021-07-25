@@ -143,19 +143,25 @@ body{
   }
 
   /* Job Description Section */
+  .hiring-heading h2{
+    font-size: 1.7rem;
+  }
+  .job-title h3{
+    font-size: 1.5rem;
+  }
   .career-inner{
     flex-direction: row;
     justify-content: space-evenly;
     margin: 3% 0;
   }
   .career-image{
-    width: 60%;
+    width: 50%;
   }
   .job-desc{
     width: 35%;
   }
   .outer-job{
-    margin: 6% 0;
+    margin: 4% 0;
   }
   .duration-location{
     margin-bottom: -1%;

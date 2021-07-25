@@ -9,7 +9,7 @@ $('.carousel').slick({
   autoplay: true,
   autoplaySpeed: 3300,
   centerMode: true,
-  centerPadding: "0",
+  centerPadding: "100px",
   cssEase: "cubic-bezier(.87,0,.13,1)",
   dots: true,
   initialSlide: 0,
@@ -19,6 +19,7 @@ $('.carousel').slick({
   pauseOnFocus: false,
   pauseOnHover: false,
   pauseOnDotsHover: true,
+  slidesToShow: 1,
   variableWidth: true,
   speed: 700,
 });
