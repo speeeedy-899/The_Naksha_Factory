@@ -1,0 +1,339 @@
+body{
+  background-color: #e9ebf0;
+}
+.content{
+  position: relative;
+}
+.projects-heading{
+  position: relative;
+}
+.heading{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.heading h1{
+  position: relative;
+  padding: 2% 0;
+  text-align: center;
+  letter-spacing: 5px;
+}
+.heading h1::after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    width: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.heading h1::after{
+  bottom: 0;
+}
+.overlay p{
+  font-size: 150%;
+  padding-left: 4%;
+  padding-top: 2%;
+  color: #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -o-transform:translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+a{
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+}
+
+/* Menu section */
+.close-icon{
+  font-size: 180%;
+  position: absolute;
+  right: 3rem;
+  top: 3rem;
+  cursor: pointer;
+  -ms-transform: rotate(0);
+  -o-transform: rotate(0);
+  -moz-transform: rotate(0);
+  -webkit-transform: rotate(0);
+  transform: rotate(0);
+  -o-transition: .4s cubic-bezier(.75,-0.5,.25,1.5);
+  -moz-transition: .4s cubic-bezier(.75,-0.5,.25,1.5);
+  -webkit-transition: .4s cubic-bezier(.75,-0.5,.25,1.5);
+  transition: .4s cubic-bezier(.75,-0.5,.25,1.5);
+}
+.close-icon:hover{
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+.open-icon{
+  position: absolute;
+  cursor: pointer;
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  -moz-transform: scale(1);
+  -webkit-transform: scale(1);
+	transform: scale(1);
+  -o-transition: .2s ease-in-out;
+  -moz-transition: .2s ease-in-out;
+	-webkit-transition: .2s ease-in-out;
+	transition: .2s ease-in-out;
+}
+.open-icon:hover{
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+	transform: scale(1.2);
+}
+
+/* Projects Section */
+.project-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.project-inner{
+  display: flex;
+}
+.project-description{
+  text-align: center;
+}
+.project-description p{
+  margin: 0 auto;
+}
+.project-item{
+  width: 100%;
+  height: 50%;
+  position: relative;
+  opacity: 1;
+  background-color: gray;
+}
+.image {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Responsive Section */
+@media screen and (min-width: 1200px) {
+  /* Heading section */
+  .projects-heading{
+    padding-top: 2.6rem;
+  }
+  .heading h1{
+    font-size: 2.4rem;
+  }
+
+  /* Menu Icon Section */
+  .open-icon{
+    font-size: 180%;
+    right: 3rem;
+    top: 3rem;
+  }
+  .close-icon{
+    font-size: 180%;
+    right: 3rem;
+    top: 3rem;
+  }
+
+  /* Projects Section */
+  .project-container{
+    margin-top: 5%;
+  }
+  .project-column{
+    width: 80%;
+  }
+  .project-inner{
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5% 0;
+  }
+  .project-description{
+    width: 40%;
+    height: 50%;
+  }
+  .project-description p{
+    width: 80%;
+  }
+  .project-link{
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px){
+  /* Heading section */
+  .projects-heading{
+    padding-top: 2.5rem;
+  }
+  .heading h1{
+    font-size: 2.2rem;
+  }
+
+  /* Menu Icon Section */
+  .open-icon{
+    font-size: 180%;
+    right: 2rem;
+    top: 3rem;
+  }
+  .close-icon{
+    font-size: 180%;
+    right: 2rem;
+    top: 3rem;
+  }
+
+  /* Projects Section */
+  .project-container{
+    margin-top: 8%;
+    height: 90vh;
+  }
+  .project-column{
+    width: 100%;
+    padding: 0 2%;
+  }
+  .project-inner{
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5% 0;
+  }
+  .project-description{
+    width: 50%;
+    height: 50%;
+  }
+  .project-link{
+    width: 45%;
+  }
+  .project-description p{
+    width: 80%;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 768px) {
+  /* Heading section */
+  .projects-heading{
+    padding-top: 2.5rem;
+  }
+  .heading h1{
+    font-size: 2rem;
+  }
+
+  /* Menu Icon Section */
+  .open-icon{
+    font-size: 180%;
+    right: 2rem;
+    top: 3rem;
+  }
+  .close-icon{
+    font-size: 180%;
+    right: 2rem;
+    top: 3rem;
+  }
+
+  /* Projects Section */
+  .project-container{
+    margin-top: 10%;
+  }
+  .project-link{
+    width: 80%;
+  }
+  .project-column{
+    width: 100%;
+    padding: 0 2%;
+  }
+  .project-inner{
+    justify-content: space-around;
+    align-items: center;
+    margin: 10% 0;
+  }
+  .inner-1{
+    flex-direction: column;
+  }
+  .inner-2{
+    flex-direction: column-reverse;
+  }
+
+  .project-description{
+    width: 50%;
+    height: 50%;
+    margin-top: 10%;
+  }
+  .project-description p{
+    width: 90%;
+    font-size: 0.8rem;
+  }
+  .project-description h3{
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  /* Heading section */
+  .projects-heading{
+    padding-top: 2.5rem;
+  }
+  .heading h1{
+    font-size: 1.6rem;
+  }
+
+  /* Menu Icon Section */
+  .open-icon{
+    font-size: 140%;
+    right: 1.5rem;
+    top: 3rem;
+  }
+  .close-icon{
+    font-size: 140%;
+    right: 1.5rem;
+    top: 3rem;
+  }
+
+  /* Projects Section */
+  .project-container{
+    margin-top: 10%;
+  }
+  .project-link{
+    width: 90%;
+  }
+  .project-column{
+    width: 100%;
+    padding: 0 2%;
+  }
+  .project-inner{
+    justify-content: space-around;
+    align-items: center;
+    margin: 20% 0 10% 0;
+  }
+  .inner-1{
+    flex-direction: column;
+  }
+  .inner-2{
+    flex-direction: column-reverse;
+  }
+
+  .project-description{
+    width: 80%;
+    height: 50%;
+    margin-top: 10%;
+  }
+  .project-description p{
+    width: 90%;
+    font-size: 0.8rem;
+  }
+  .project-description h3{
+    font-size: 1rem;
+  }
+}
