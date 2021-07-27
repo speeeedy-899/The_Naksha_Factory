@@ -99,11 +99,13 @@ a{
 
 /* Projects Section */
 .project-container{
+  background-color: #e7e5e6;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 100%;
+  width: 80%;
+  margin: auto;
 }
 
 .project-inner{
@@ -152,7 +154,7 @@ a{
 
   /* Projects Section */
   .project-container{
-    margin-top: 5%;
+    margin-top: 6%;
   }
   .project-column{
     width: 80%;
@@ -198,7 +200,7 @@ a{
 
   /* Projects Section */
   .project-container{
-    margin-top: 8%;
+    margin-top: 10%;
     height: 90vh;
   }
   .project-column{
@@ -245,7 +247,7 @@ a{
 
   /* Projects Section */
   .project-container{
-    margin-top: 10%;
+    margin-top: 20%;
   }
   .project-link{
     width: 80%;
@@ -303,7 +305,7 @@ a{
 
   /* Projects Section */
   .project-container{
-    margin-top: 10%;
+    margin-top: 25%;
   }
   .project-link{
     width: 90%;

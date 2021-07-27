@@ -13,7 +13,7 @@ $('.carousel').slick({
   cssEase: "cubic-bezier(.87,0,.13,1)",
   // dots: true,
   initialSlide: 0,
-  lazyLoad: "ondemand",
+  // lazyLoad: "ondemand",
   nextArrow: "<img class='slick-next' src='../right.svg'>",
   prevArrow: "<img class='slick-prev' src='../left.svg'>",
   pauseOnFocus: false,

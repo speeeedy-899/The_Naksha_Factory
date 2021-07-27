@@ -46,10 +46,10 @@ html, body{
   -moz-transform: rotate(0);
   -webkit-transform: rotate(0);
   transform: rotate(0);
-  -o-transition: .2s ease-in-out;
-  -moz-transition: .2s ease-in-out;
-  -webkit-transition: .2s ease-in-out;
-  transition: .2s ease-in-out;
+  -o-transition: .4s cubic-bezier(.75,-0.5,.25,1.5);
+  -moz-transition: .4s cubic-bezier(.75,-0.5,.25,1.5);
+  -webkit-transition: .4s cubic-bezier(.75,-0.5,.25,1.5);
+  transition: .4s cubic-bezier(.75,-0.5,.25,1.5);
 }
 .close-icon:hover{
   -ms-transform: rotate(90deg);
@@ -232,6 +232,8 @@ html, body{
 }
 @media screen and (max-width: 500px){
   .heading{
+    margin: 0 auto;
+    width: 70%;
     padding-top: 8%;
   }
   .heading h1{
@@ -260,7 +262,8 @@ html, body{
     width: 100%;
   }
   .carousel-info{
-    margin-bottom: 40%;
+    margin-top: 5%;
+    margin-bottom: 50%;
     width: 90%;
   }
   .carousel-info p{
