@@ -180,13 +180,13 @@ else if (deviceWidth <= 768) {
         }
       },
       "color": {
-        "value": "#fff"
+        "value": "#8c8c8c"
       },
       "shape": {
         "type": "circle",
         "stroke": {
           "width": 0,
-          "color": "#fff"
+          "color": "#8c8c8c"
         },
         "polygon": {
           "nb_sides": 5
@@ -220,7 +220,7 @@ else if (deviceWidth <= 768) {
       "line_linked": {
         "enable": true,
         "distance": 150,
-        "color": "#fff",
+        "color": "#8c8c8c",
         "opacity": 0.4,
         "width": 1
       },
