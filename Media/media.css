@@ -1,5 +1,5 @@
 body{
-  background-color: #e9ebf0;
+  background-color: #fff;
 }
 .content{
   position: relative;
@@ -31,20 +31,6 @@ body{
 }
 .heading h1::after{
   bottom: 0;
-}
-.overlay p{
-  font-size: 150%;
-  padding-left: 4%;
-  padding-top: 2%;
-  color: #000;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -o-transform:translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
 }
 a{
   height: 100%;
@@ -155,6 +141,7 @@ a{
   /* Projects Section */
   .project-container{
     margin-top: 6%;
+    margin-bottom: 5%;
   }
   .project-column{
     width: 80%;
@@ -201,6 +188,7 @@ a{
   /* Projects Section */
   .project-container{
     margin-top: 10%;
+    margin-bottom: 5%;
     height: 90vh;
   }
   .project-column{
@@ -248,6 +236,7 @@ a{
   /* Projects Section */
   .project-container{
     margin-top: 20%;
+    margin-bottom: 5%;
   }
   .project-link{
     width: 80%;
@@ -306,6 +295,7 @@ a{
   /* Projects Section */
   .project-container{
     margin-top: 25%;
+    margin-bottom: 5%;
   }
   .project-link{
     width: 90%;
