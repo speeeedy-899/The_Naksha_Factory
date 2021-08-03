@@ -97,9 +97,6 @@ html, body{
 .carousel-text{
   text-align: center;
 }
-.slick-slide{
-  /* height: 70vh; */
-}
 .slick-arrow, .slick-next, .slick-prev{
   z-index: 1;
   transition: 0.4s;

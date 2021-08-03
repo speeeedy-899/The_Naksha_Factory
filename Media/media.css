@@ -82,7 +82,14 @@ a{
   -webkit-transform: scale(1.2);
 	transform: scale(1.2);
 }
-
+/* Carousel Section */
+.carousel{
+  width: 100%;
+}
+.slide img{
+  width: 100%;
+  padding: 0 auto;
+}
 /* Projects Section */
 .project-container{
   background-color: #e7e5e6;
@@ -95,6 +102,7 @@ a{
 }
 
 .project-inner{
+  width: 100%;
   display: flex;
 }
 .project-description{
@@ -250,10 +258,10 @@ a{
     align-items: center;
     margin: 10% 0;
   }
-  .inner-1{
+  .inner-even{
     flex-direction: column;
   }
-  .inner-2{
+  .inner-odd{
     flex-direction: column-reverse;
   }
 
@@ -309,10 +317,10 @@ a{
     align-items: center;
     margin: 20% 0 10% 0;
   }
-  .inner-1{
+  .inner-even{
     flex-direction: column;
   }
-  .inner-2{
+  .inner-odd{
     flex-direction: column-reverse;
   }
 
