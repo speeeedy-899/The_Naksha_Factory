@@ -130,6 +130,29 @@ p .fas{
   color: black;
 }
 
+/* Back To Top Section */
+.backtotop{
+  text-align: center;
+  z-index: 5;
+  visibility: hidden;
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  transition: 0.25s ease;
+}
+.backtotop:hover{
+  bottom: 1.4rem;
+  color: #f9cc65;
+}
+.backtotop a{
+  text-decoration: none;
+  color: #4a3403;
+}
+.backtotop i{
+  color: #4a3403;
+  transition: 0.25s ease;
+}
+
 /* Responsive Section */
 @media screen and (min-width: 1200px){
   /* Menu Icon Section */
@@ -195,6 +218,9 @@ p .fas{
   .fas{
     font-size: 120%;
   }
+  .backtotop{
+    font-size: 75%;
+  }
 }
 @media screen and (min-width: 500px) and (max-width: 768px){
   /* Menu Icon Section */
@@ -221,6 +247,9 @@ p .fas{
   }
   .fas{
     font-size: 110%;
+  }
+  .backtotop{
+    font-size: 70%;
   }
 }
 @media screen and (max-width: 500px){
@@ -259,5 +288,8 @@ p .fas{
   }
   .fas{
     font-size: 100%;
+  }
+  .backtotop{
+    font-size: 70%;
   }
 }

@@ -11,7 +11,6 @@ $('.carousel').slick({
   centerMode: true,
   centerPadding: "0",
   cssEase: "cubic-bezier(.87,0,.13,1)",
-  // dots: true,
   initialSlide: 0,
   // lazyLoad: "ondemand",
   pauseOnFocus: false,

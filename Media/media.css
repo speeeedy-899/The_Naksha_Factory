@@ -124,6 +124,28 @@ a{
   height: 100%;
 }
 
+/* Back To Top Section */
+.backtotop{
+  z-index: 5;
+  visibility: hidden;
+  font-size: 200%;
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  transition: 0.25s ease;
+}
+.backtotop:hover{
+  bottom: 1.4rem;
+}
+.backtotop i{
+  color: #423d40;
+  transition: 0.25s ease;
+}
+.backtotop i:hover{
+  bottom: 2.2rem;
+  color:#c2bdbf;
+}
+
 /* Responsive Section */
 @media screen and (min-width: 1200px) {
   /* Heading section */

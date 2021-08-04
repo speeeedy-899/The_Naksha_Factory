@@ -3,6 +3,15 @@ const html = document.querySelector("html");
 const menuNav = document.querySelector("#menu");
 const openIcon = document.querySelector(".open-icon");
 
+$(window).scroll(function() {
+    if ($(window).scrollTop() > 100) {
+        $(".backtotop").css("visibility", "visible");
+        console.log("Ive got 50 p, fuck you.");
+    }
+    else {
+        $(".backtotop").css("visibility", "hidden");
+    }
+});
 
 var style1 = {
   useEasing: true,
