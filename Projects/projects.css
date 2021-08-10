@@ -4,30 +4,48 @@ body{
 .content{
   position: relative;
 }
-.projects-heading{
-  position: relative;
+.main-nav{
+  background-color: #f9cc65;
+  box-shadow: 0px 10px 30px gray;
+  top: 0;
+  z-index: 10;
+  position: fixed;
+  width: 100%;
 }
-.heading{
+.back{
+  position: absolute;
+  width: 2rem;
+}
+.back i:hover{
+  font-size: 170%;
+  color: white;
+}
+.back i{
+  color: #000;
+  transition: all 0.4s ease;
+  font-size: 150%;
+}
+.projects-heading{
+  top: 2rem;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
 }
 .heading h1{
   position: relative;
-  padding: 2% 0;
   text-align: center;
   letter-spacing: 5px;
 }
 .heading h1::after{
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    width: 50%;
-    left: 50%;
-    transform: translateX(-50%);
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  width: 50%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .heading h1::after{
   bottom: 0;
@@ -106,7 +124,6 @@ a{
   width: 100%;
 }
 .project-column{
-  /* background-color: #fad684; */
   height: 50%;
 }
 .project-inner{
@@ -318,11 +335,15 @@ ul li {
 /* Responsive Section */
 @media screen and (min-width: 1200px) {
   /* Heading section */
-  .projects-heading{
-    padding-top: 2.6rem;
-  }
   .heading h1{
     font-size: 2.4rem;
+  }
+  .main-nav{
+    height: 7rem;
+  }
+  .back{
+    left: 3rem;
+    top: 3rem;
   }
 
   /* Menu Icon Section */
@@ -339,7 +360,7 @@ ul li {
 
   /* Projects Section */
   .project-container{
-    margin-top: 5%;
+    margin-top: 10%;
   }
   .project-column{
     width: 80%;
@@ -364,28 +385,31 @@ ul li {
 
 @media screen and (min-width: 768px) and (max-width: 1200px){
   /* Heading section */
-  .projects-heading{
-    padding-top: 2.5rem;
+  .main-nav{
+    height: 6rem;
+  }
+  .back{
+    left: 2rem;
+    top: 2.3rem;
   }
   .heading h1{
     font-size: 2.2rem;
   }
-
   /* Menu Icon Section */
   .open-icon{
     font-size: 180%;
     right: 2rem;
-    top: 3rem;
+    top: 2.3rem;
   }
   .close-icon{
     font-size: 180%;
     right: 2rem;
-    top: 3rem;
+    top: 2.3rem;
   }
 
   /* Projects Section */
   .project-container{
-    margin-top: 8%;
+    margin-top: 10%;
   }
   .project-column{
     width: 100%;
@@ -411,13 +435,21 @@ ul li {
     font-size: 75%;
   }
 }
+
 @media screen and (min-width: 500px) and (max-width: 768px) {
   /* Heading section */
   .projects-heading{
-    padding-top: 2.5rem;
+    padding-top: 0.5rem;
+  }
+  .main-nav{
+    height: 7rem;
   }
   .heading h1{
     font-size: 2rem;
+  }
+  .back{
+    left: 2rem;
+    top: 3rem;
   }
 
   /* Menu Icon Section */
@@ -434,7 +466,7 @@ ul li {
 
   /* Projects Section */
   .project-container{
-    margin-top: 10%;
+    margin-top: 15%;
   }
   .project-column{
     width: 100%;
@@ -467,28 +499,32 @@ ul li {
 
 @media screen and (max-width: 500px) {
   /* Heading section */
-  .projects-heading{
-    padding-top: 2.5rem;
-  }
   .heading h1{
     font-size: 1.6rem;
+  }
+  .main-nav{
+    height: 5.5rem;
+  }
+  .back{
+    left: 1.5rem;
+    top: 2rem;
   }
 
   /* Menu Icon Section */
   .open-icon{
     font-size: 140%;
     right: 1.5rem;
-    top: 3rem;
+    top: 2rem;
   }
   .close-icon{
     font-size: 140%;
     right: 1.5rem;
-    top: 3rem;
+    top: 2rem;
   }
 
   /* Projects Section */
   .project-container{
-    margin-top: 10%;
+    margin-top: 22%;
   }
   .project-column{
     width: 100%;

@@ -7,7 +7,33 @@ html, body{
 .content{
   position: relative;
 }
-
+.main-nav{
+  background-color: #f9cc65;
+  box-shadow: 0px 10px 30px gray;
+  top: 0;
+  z-index: 10;
+  position: fixed;
+  width: 100%;
+}
+.back{
+  position: absolute;
+  width: 2rem;
+}
+.back i:hover{
+  font-size: 170%;
+  color: white;
+}
+.back i{
+  color: #000;
+  transition: all 0.4s ease;
+  font-size: 150%;
+}
+.heading{
+  top: 1.5rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
 /* Heading Section */
 .heading{
   padding-top: 0.5%;
@@ -80,9 +106,6 @@ html, body{
 }
 
 /* Project Display Section */
-.project-display{
-  margin: 0 auto;
-}
 .project-text{
   text-align: center;
 }
@@ -155,6 +178,13 @@ p .fas{
 
 /* Responsive Section */
 @media screen and (min-width: 1200px){
+  .main-nav{
+    height: 7rem;
+  }
+  .back{
+    left: 3rem;
+    top: 3rem;
+  }
   /* Menu Icon Section */
   .open-icon{
     font-size: 180%;
@@ -180,6 +210,7 @@ p .fas{
   }
   /* Project Section */
   .project-display{
+    margin: 10% auto 0 auto;
     width: 60%;
   }
   .project{
@@ -193,20 +224,28 @@ p .fas{
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1200px){
+  .main-nav{
+    height: 6.5rem;
+  }
+  .back{
+    left: 3rem;
+    top: 2.5rem;
+  }
   /* Menu Icon Section */
   .open-icon{
     font-size: 180%;
     right: 3rem;
-    top: 3rem;
+    top: 2.5rem;
   }
   .close-icon{
     font-size: 180%;
     right: 3rem;
-    top: 3rem;
+    top: 2.5rem;
   }
 
   /* Projects Section */
   .project-display{
+    margin: 15% auto 0 auto;
     width: 70%;
   }
   .project{
@@ -223,21 +262,29 @@ p .fas{
   }
 }
 @media screen and (min-width: 500px) and (max-width: 768px){
+  .main-nav{
+    height: 6rem;
+  }
+  .back{
+    left: 2rem;
+    top: 2.5rem;
+  }
   /* Menu Icon Section */
   .open-icon{
     font-size: 180%;
-    right: 3rem;
+    right: 2rem;
     top: 2.5rem;
   }
   .close-icon{
     font-size: 180%;
-    right: 3rem;
+    right: 2rem;
     top: 2.5rem;
   }
 
   /* Projects Section */
   .project-display{
     width: 90%;
+    margin: 20% auto 0 auto;
   }
   .project{
     margin: 10% 0;
@@ -253,6 +300,13 @@ p .fas{
   }
 }
 @media screen and (max-width: 500px){
+  .main-nav{
+    height: 5.5rem;
+  }
+  .back{
+    left: 1.5rem;
+    top: 2rem;
+  }
   /* Heading Section */
   .heading h1{
     font-size: 1.5rem;
@@ -262,16 +316,17 @@ p .fas{
   .open-icon{
     font-size: 160%;
     right: 1.5rem;
-    top: 2.5rem;
+    top: 2rem;
   }
   .close-icon{
     font-size: 160%;
     right: 1.5rem;
-    top: 2.5rem;
+    top: 2rem;
   }
 
   /* Projects Section */
   .project-display{
+    margin: 25% auto 0 auto;
     width: 90%;
   }
   .project{
